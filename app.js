@@ -20,7 +20,7 @@ var app = express();
 // buat koneksi ke mongodb
 var dev_db_url = 'mongodb+srv://rootidn:RLJ2wbasTbQxn7Oi@cluster0.umsox.mongodb.net/local_library?retryWrites=true&w=majority';
 var mongoDB = process.env.MONGODB_URI || dev_db_url;
-mongoose.connect(mongoDb, { useNewUrlParser: true, useUnifiedTopology:true});
+mongoose.connect(mongoDB, { useNewUrlParser: true, useUnifiedTopology:true});
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'Mongodb connection error'));
 
